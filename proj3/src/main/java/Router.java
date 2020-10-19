@@ -70,7 +70,10 @@ public class Router {
             lst.addFirst(x);
         }
         lst.addFirst(src);
-        return lst; // FIXME
+        if(lst.contains(dst)) {
+            return lst; // FIXME
+        }
+        return null;
     }
 
     /**
