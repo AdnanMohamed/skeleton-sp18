@@ -66,7 +66,7 @@ public class Router {
         }
 
         LinkedList<Long> lst = new LinkedList<>();
-        for (Long x = dst; !x.equals(src); x = edgeTo.get(x)) {
+        for (Long x = dst; x != null && !x.equals(src); x = edgeTo.get(x)) {
             lst.addFirst(x);
         }
         lst.addFirst(src);
